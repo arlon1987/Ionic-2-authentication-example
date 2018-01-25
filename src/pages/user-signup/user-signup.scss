@@ -1,0 +1,15 @@
+.ios,.md,.wp{
+  page-user-signup {
+    .toolbar-background{ background:transparent; border-style:none;}
+    .toolbar::after,.header-md::after{ background-image:none;}
+    ion-content{
+      background-color:color($colors,primary);
+       background-image:url('../assets/images/bg-pattern.png');
+       background-size:100% auto;
+    }
+    //.scroll-content { display: table; width: 100%; height: 100%; }
+    //.centerAlign { display: table-cell; vertical-align: middle; }
+
+    .item{border:$border-color 1px solid !important; margin-bottom:10px;}
+  }
+}

@@ -1,0 +1,72 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+//-----------------------------------------------------
+
+ion-menu{
+    .header::after{background-image:none;} /*Hide toolbar shadow*/
+     ion-toolbar{
+         .toolbar-background{background:$menu_bg_color; border:0px; }
+         .toolbar-content{
+                ion-item{
+                background: transparent;
+                h2{font-size:$size_small;font-weight: normal; color:$menu_avatar_text_color;}
+                p{font-size:$size_extrasmall;font-weight: normal; color:$menu_avatar_text_color;}
+                ion-avatar{
+                    background:$menu_avatar_bg_color;border-radius:50%;text-align: center;
+                    h2{
+                        margin: 0;
+                        font-size:$size_extralarge;
+                        line-height: 40px; color:$menu_avatar_font_color;
+                    }
+                }
+            }
+        }
+      }
+
+     ion-content{
+             background-color:$menu_bg_color !important;
+             ion-list{
+                    .item{background:transparent; color:$menu_font_color;font-size:$menu_font_size;}
+                    .item-inner{
+                        border-bottom: 1px solid $menu_separator_line_color !important;
+                        img{width: 25px;height: 25px;vertical-align: middle;margin-right: 10px;margin-bottom: 5px;}
+                        ion-icon{width:30px; height:30px; vertical-align: middle;  font-size:1.9em;  }
+                    }
+
+            }
+     }
+}
+
+//-----------------------------------------------------
+.button-md {text-transform:none;}
+.facebookButton {background-color:#3b5998; color:#fff; }
+.instagramButton {
+    background: rgba(97,95,202,1);
+    background: -moz-linear-gradient(-45deg, rgba(97,95,202,1) 0%, rgba(183,57,139,1) 31%, rgba(214,139,58,1) 67%, rgba(219,54,131,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(97,95,202,1)), color-stop(31%, rgba(183,57,139,1)), color-stop(67%, rgba(214,139,58,1)), color-stop(100%, rgba(219,54,131,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(97,95,202,1) 0%, rgba(183,57,139,1) 31%, rgba(214,139,58,1) 67%, rgba(219,54,131,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(97,95,202,1) 0%, rgba(183,57,139,1) 31%, rgba(214,139,58,1) 67%, rgba(219,54,131,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(97,95,202,1) 0%, rgba(183,57,139,1) 31%, rgba(214,139,58,1) 67%, rgba(219,54,131,1) 100%);
+    background: linear-gradient(135deg, rgba(97,95,202,1) 0%, rgba(183,57,139,1) 31%, rgba(214,139,58,1) 67%, rgba(219,54,131,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#615fca', endColorstr='#db3683', GradientType=1 );
+    color: #fff;padding: 0 28px;
+ }
+ .hrLine { width: 75%;
+    text-align:center;
+     border-bottom: 1px dotted #fff; line-height: 0.1em; margin:15px auto;}
+ .hrLine span { background:#fff; padding:0 5px;  font-size:18px; color:#000;}

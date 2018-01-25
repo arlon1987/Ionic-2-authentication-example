@@ -1,0 +1,30 @@
+<ion-menu [content]="content" type="overlay"  persistent="true" >
+
+<ion-header>
+  <ion-toolbar>
+    <ion-item no-lines>
+      <ion-avatar item-left>
+        <h2>G</h2>
+      </ion-avatar>
+      <h2>Hello,</h2>
+      <p>Guest User</p>
+    </ion-item>
+    <ion-buttons end>
+      <button ion-button icon-only >
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-lines>
+    <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <ion-icon name="{{p.icon}}"></ion-icon>  {{p.title}}
+    </button>
+  </ion-list>
+</ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

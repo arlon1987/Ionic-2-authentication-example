@@ -1,0 +1,36 @@
+<ion-header >
+  <ion-navbar  hideBackButton="true">
+    <ion-buttons end>
+     <button ion-button icon-right color="light" (click)="dashboardPage()">SKIP<ion-icon name="ios-arrow-forward"></ion-icon></button>
+   </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col ><button ion-button block class="facebookButton">Login With Facebook</button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><button ion-button block class="instagramButton">Login With Instagram</button></ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="hrLine"><span>Or</span></div>
+
+    <ion-list no-lines padding-top>
+      <ion-item>
+        <ion-input type="text" placeholder="Username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block round color="secondary">Login</button>
+
+    <div padding-top>
+    <button ion-button block color="light" clear (click)="signupPage();">If new member ? SIGNUP</button>
+    <button ion-button block color="light" clear (click)="forgotPasswordPage();">Forgot Password</button>
+  </div>
+
+</ion-content>
